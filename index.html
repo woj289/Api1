@@ -1,0 +1,48 @@
+<html>
+   <head>
+      <META HTTP-EQUIV="content-type" CONTENT="text/html; charset=iso-8859-2">
+      <script src="http://code.jquery.com/jquery-latest.js"></script>
+      <script src="submit.js"></script>
+      <link rel="stylesheet" type="text/css" href="main.css">
+   </head>
+   <body>
+      <form id="myForm" method="post">
+         <div class="section group">
+            <div class="col span_1_of_3">
+            </div>
+            <div class="col span_1_of_3">
+               Zakres orderbooka:<br/></br>
+               <input type="text" id="order_start" name="order_start" maxlength="5" size="5"> - <input type="text" name="order_stop" id="order_stop" maxlength="5" size="5">
+               </br></br><input type="radio" name="offer_type" value="buy" checked="checked"> <font color="green">BUY</font>
+               <input type="radio" name="offer_type" value="sell"> <font color="red">SELL</font>
+            </div>
+            <div class="col span_1_of_3">
+            </div>
+         </div>
+         <div class="section group">
+            <div class="col span_1_of_3">
+            </div>
+            <div class="col span_1_of_3">
+               Roznica: <input type="number" name="offer_difference" id="offer_difference" pattern="[0-9]{1}" maxlength="1" size="5" value="3" min="1" max="9">
+               <br/><br/>
+               Wartosci:
+               <select name="offer_value" id="offer_value" form="myForm">
+                  <option value="0">0.001 - 0.004</option>
+                  <option value="1">0.01 - 0.09</option>
+                  <option value="2">0.1 - 0.4</option>
+                  <option value="3">0.5 - 0.9</option>
+                  <option value="4">1.0 - 1.2</option>
+               </select>
+               <br/><br/>
+               <input type="button" id="submitFormData" onclick="SubmitFormData();" value="GENERUJ" />
+               <br/><br/>
+               <div id="results">
+                  <br/><br/>
+               </div>
+      </form>
+      </div>
+      <div class="col span_1_of_3">
+      </div>
+      </div>
+   </body>
+</html>
